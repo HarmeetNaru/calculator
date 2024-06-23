@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheets" href="cal.css">
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            background-color: antiquewhite;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .frame{
+            height: 600px;
+            width: 460px;
+         background-color: white;
+         box-shadow: 5px 5px 15px #519d9a,-5px -5px 10px #ffffff;
+        
+
+        }
+        .heading
+        {
+            text-align: center;
+            padding: 10px;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        #display{
+            height: 90px;
+            width: 100%;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            box-shadow:  inset 2px 2px 10px #b4edf4,inset -5px -5px 10px #ffffff;
+            font-size: 30px;
+            padding: 10px;
+            box-sizing: border-box;
+            text-align: right;
+        }
+        .buttons{
+            display: flex;
+            justify-content: space-around;
+            s
+
+        }
+        .btn{
+            width: 99px;
+            height: 90px;
+            border: none;
+            outline: none;
+            box-shadow: 5px 5px 10px #b6acac,-5px -5px 10px  #fafaf4;
+            
+        }
+        .btn:active{
+            box-shadow:inset 1px 1px 2px #babeec,inset -1px 2px #ffffff;
+        }
+        .btn:hover{
+            background-color: blue;
+            color: whitesmoke;
+            cursor: pointer;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="frame">
+        <P class="heading"> My calculator&#125787</P>
+        <div  class="display">
+            <input type="text" id="display" disabled>
+        </div>
+        <br>
+<div class="buttons">
+    <input type="button" class="btn" value="7" onclick="display.value += '7'">
+    <input type="button" class="btn" value="8" onclick="display.value += '8'">
+    <input type="button" class="btn" value="9" onclick="display.value += '9'">
+    <input type="button" class="btn" style="background-color: green;" value="+" onclick="display.value += '+'">
+
+
+</div>
+<br>
+<div class="buttons">
+    <input type="button" class="btn" value="4" onclick="display.value += '4'">
+    <input type="button" class="btn" value="5" onclick="display.value += '5'">
+    <input type="button" class="btn" value="6" onclick="display.value += '6'">
+    <input type="button" class="btn" style=" background-color: green;" value="-" onclick="display.value += '-'">
+
+
+</div>
+<br>
+<div class="buttons">
+    <input type="button" class="btn" value="1" onclick="display.value += '1'">
+    <input type="button" class="btn" value="2" onclick="display.value += '2'">
+    <input type="button" class="btn" value="3" onclick="display.value += '3'">
+    <input type="button" class="btn" style=" background-color: green;" value="*" onclick="display.value += '*'">
+
+
+</div>
+<br>
+<div class="buttons">
+    <input type="button" class="btn" style="background-color: green;" value="c" onclick="display.value = ''">
+    <input type="button" class="btn" value="0" onclick="display.value += '0'">
+    <input type="button" class="btn" style="background-color: green;" value="/" onclick="display.value += '/'">
+    <input type="button" class="btn" style="background-color: green;" value="=" onclick="display.value =  eval(display.value)">
+
+
+</div>
+
+    </div>
+</body>
+</html>
